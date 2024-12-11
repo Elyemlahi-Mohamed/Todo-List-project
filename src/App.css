@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+body {
+  background-color: #011627;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.taskContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* === Fonts === */
+@font-face {
+  font-family: "montserrat";
+  src: url(../public/Fonts/Montserrat-Regular.ttf);
+  font-weight: 400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: "montserrat";
+  src: url(../public/Fonts/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url(../public/Fonts/Montserrat-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url(../public/Fonts/Montserrat-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url(../public/Fonts/Montserrat-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url(../public/Fonts/Montserrat-Black.ttf);
+  font-weight: 900;
+}
+
+/* === Fonts === */
+
+
+.appMainTitle {
+  background: hsla(217, 100%, 50%, 1);
+  background: linear-gradient(180deg, hsla(217, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+
+}
+
+.taskListCard {
+  background: #233d4d !important;
+}
+
+.taskCard {
+  background-color: #4f6175 !important;
+  color: white !important;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 16px;
+  box-shadow: rgba(255, 255, 255, 0.80) 0px 1px 3px, rgba(255, 255, 255, 0.50) 0px 1px 2px !important;
 }
 
-.App-link {
-  color: #61dafb;
+.appSubTitle {
+  background-color: #1f7a8c !important;
+  transition: 0.5 linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.checkBtn:hover {
+  background-color: #17c50a70 !important;
+}
+
+.editBtn:hover {
+  background-color: #065392 !important;
+  color: white !important;
+  transition: all 0.3s !important;
+}
+
+.deleteBtn:hover {
+  background-color: #97180f !important;
+  color: white !important;
+  transition: all 0.3s !important;
+}
+
+/* TEXTFIELD */
+.input {
+  display: block;
+  width: 90%;
+  height: 30px;
+  border: 2px solid transparent !important;
+  outline: none;
+  border-bottom: 2px solid #3f3f3f !important;
+  caret-color: #3f3f3f !important;
+  background-color: #212121 !important;
+  color: #ffffff;
+  padding: 5px;
+  margin: 10px auto;
+  transition: .5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+.input:focus {
+  border: 2px solid #1f7a8c !important;
+  caret-color: #1f7a8c !important;
+  color: #ffffff !important;
+}
+
+.input:focus::placeholder {
+  color: #ffffff !important;
+}
+
+/* TEXTFIELD */
+
+.addTaskBtn {
+  transition: .5s linear !important;
+}
+
+.addTaskBtn:hover {
+  background-color: #011627 !important;
+  border: 1px solid #1f7a8c !important;
+}
+
+.confirmationBtn{
+  transition: 0.5 linear;
+}
+
+.confirmationBtn:hover{
+  background-color: #d32f2f !important;
+  border: 1px solid #d32f2f !important;
 }
